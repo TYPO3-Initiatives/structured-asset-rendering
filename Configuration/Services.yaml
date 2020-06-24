@@ -1,0 +1,17 @@
+services:
+  MyVendor\AssetPostProcessing\EventListener\AssetRenderer\Cdn:
+    tags:
+      - name: event.listener
+        identifier: myvendor/asset-post-processing/Cdn-JS
+        event: TYPO3\CMS\Core\Page\Event\BeforeJavaScriptsRenderingEvent
+      - name: event.listener
+        event: TYPO3\CMS\Core\Page\Event\BeforeStylesheetsRenderingEvent
+  MyVendor\AssetPostProcessing\EventListener\AssetRenderer\LibraryVersion:
+    tags:
+      - name: event.listener
+        event: TYPO3\CMS\Core\Page\Event\BeforeJavaScriptsRenderingEvent
+        before: myvendor/asset-post-processing/Cdn-JS
+  MyVendor\AssetPostProcessing\EventListener\AssetRenderer\CssMinify:
+    tags:
+      - name: event.listener
+        event: TYPO3\CMS\Core\Page\Event\BeforeStylesheetsRenderingEvent

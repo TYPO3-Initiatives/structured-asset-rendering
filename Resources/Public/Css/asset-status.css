@@ -1,0 +1,20 @@
+#asset-status {
+    position: absolute;
+    z-index: 9999;
+    color: #fff;
+    background: #333;
+    font-size: 200%;
+}
+#asset-status section::after {
+    content: "\274C  CssMinify"; /* CROSS MARK */
+    display: block;
+}
+
+#asset-status * {
+    padding: 0 8px;
+    white-space: pre;
+}
+
+#asset-status :nth-child(odd) {
+    background: #f49700;
+}

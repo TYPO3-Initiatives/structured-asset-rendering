@@ -1,23 +1,22 @@
 {
-    "name": "t3sci/structured-asset-rendering",
+    "name": "jonaseberle/asset-post-processing",
     "type": "typo3-cms-extension",
-    "description": "First try of Content element / content block based TYPO3 CSS and JS rendering.\n\nA Proove of Concept try of the TYPO3 Structured Content Initiative.\n\nGoals\nLoad only needed CSS\nLoad only needed JS\nImprove page speed\nReduce page resources size\nManage CSS and JS dependencies\nSecondary Ideas\nConcatenation and compress JS and CSS\nPossibility to use SCSS, SASS",
-    "authors": [],
+    "description": "Example to show usage of AssetRenderer Event Listeners in TYPO3 X",
+    "authors": [
+        {
+            "name": "Jonas Eberle",
+            "email": "flightvision@googlemail.com",
+            "role": "Developer"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
     "require": {
-        "typo3/cms-core": "^9.5"
+        "typo3/cms-core": "^10.4 || 10.*@dev"
     },
     "autoload": {
         "psr-4": {
-            "T3sci\\StructuredAssetRendering\\": "Classes"
+            "MyVendor\\AssetPostProcessing\\": "Classes"
         }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "T3sci\\StructuredAssetRendering\\Tests\\": "Tests"
-        }
-    },
-    "replace": {
-        "t3sci/structured-asset-rendering": "self.version",
-        "typo3-ter/structured-asset-rendering": "self.version"
     }
 }
