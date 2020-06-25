@@ -1,5 +1,5 @@
 {
-    "name": "jonaseberle/asset-post-processing",
+    "name": "typo3-structured-content/asset-rendering",
     "type": "typo3-cms-extension",
     "description": "Example to show usage of AssetRenderer Event Listeners in TYPO3 X",
     "authors": [
@@ -12,7 +12,7 @@
     "license": "MIT",
     "minimum-stability": "dev",
     "require": {
-        "typo3/cms-core": "^10.4 || 10.*@dev"
+        "typo3/cms-core": "^10.4 || 10.*@dev || ^11.0 || 11.*@dev"
     },
     "autoload": {
         "psr-4": {

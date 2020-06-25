@@ -1,9 +1,15 @@
 # Example TYPO3 Extension
 ### AssetRenderer events
 
-This is meant as a kickstarter to test [https://review.typo3.org/c/Packages/TYPO3.CMS/+/64021][review] during review and to serve as an example later.
+This is meant as a kickstarter to test [https://review.typo3.org/c/Packages/TYPO3.CMS/+/64021][review] during review and to serve as an example for handling AssetCollector/AssetRenderer events later.
 
-You can download it or `composer req jonaseberle/asset-post-processing:dev-master`. No further configuration needed.
+You can download it or install via composer:
+
+    composer config repositories.asset-rendering vcs https://github.com/TYPO3-Initiatives/structured-asset-rendering.git
+    composer config minimum-stability dev
+    composer req typo3-structured-content/asset-rendering:dev-master
+
+No further configuration needed.
 
 After installing it registers some assets (in `ext_localconf.php`). You can also register assets in Fluid with `<f:asset.css>` and `<f:asset.js>`.
 
