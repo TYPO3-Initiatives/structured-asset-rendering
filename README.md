@@ -1,9 +1,8 @@
-# Example TYPO3 Extension
-### AssetRenderer events
+# AssetRenderer events showcase
 
-This is meant as a kickstarter to test [https://review.typo3.org/c/Packages/TYPO3.CMS/+/64021][review] during review and to serve as an example for handling AssetCollector/AssetRenderer events later.
+This is meant as a kickstarter to test [https://review.typo3.org/c/Packages/TYPO3.CMS/+/64021][review] during review and to serve as a showcase for using AssetCollector/AssetRenderer events later.
 
-If you want to have a quick look around, you can start it with [DDEV-Local](https://ddev.readthedocs.io/):
+If you just want to have a quick look around, you can start it with [DDEV-Local](https://ddev.readthedocs.io/):
 
     ddev launch
 
@@ -19,6 +18,6 @@ After installing it registers some assets (in `ext_localconf.php`). You can also
 
 It registers some EventListeners in `Services.yaml`. They get called before assets are being rendered.
 
-It reports in the frontend which listeners were executed. Play around with the code and see how it affects assets the listeners and the JS/CSS output.
+It reports in the frontend which listeners were executed.
 
 [review]: https://review.typo3.org/c/Packages/TYPO3.CMS/+/64021
