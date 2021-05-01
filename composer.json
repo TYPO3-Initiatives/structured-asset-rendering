@@ -1,7 +1,12 @@
 {
-    "name": "typo3-structured-content/asset-rendering",
+    "name": "typo3-structured-content/asset-post-processing",
     "type": "typo3-cms-extension",
     "description": "Example to show usage of AssetRenderer Event Listeners in TYPO3 X",
+    "keywords": [
+        "typo3",
+        "assetcollector",
+        "assetrenderer"
+    ],
     "authors": [
         {
             "name": "Jonas Eberle",

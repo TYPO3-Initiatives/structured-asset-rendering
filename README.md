@@ -5,9 +5,11 @@ This is meant as a kickstarter to test [https://review.typo3.org/c/Packages/TYPO
 
 You can download it or install via composer:
 
-    composer config repositories.asset-rendering vcs https://github.com/TYPO3-Initiatives/structured-asset-rendering.git
+You can also download it or install via composer into your test installation:
+
+    composer config repositories.asset-post-processing vcs https://github.com/TYPO3-Initiatives/structured-asset-rendering.git
     composer config minimum-stability dev
-    composer req typo3-structured-content/asset-rendering:dev-master
+    composer req typo3-structured-content/asset-post-processing:dev-master
 
 No further configuration needed.
 
