@@ -1,17 +1,28 @@
 services:
+  MyVendor\AssetPostProcessing\EventListener\AssetRenderer\InjectAssets:
+    tags:
+      - name: event.listener
+        identifier: myvendor/asset-post-processing/InjectAssets
+        event: TYPO3\CMS\Core\Page\Event\BeforeJavaScriptsRenderingEvent
+      - name: event.listener
+        identifier: myvendor/asset-post-processing/InjectAssets
+        event: TYPO3\CMS\Core\Page\Event\BeforeStylesheetsRenderingEvent
   MyVendor\AssetPostProcessing\EventListener\AssetRenderer\Cdn:
     tags:
       - name: event.listener
         identifier: myvendor/asset-post-processing/Cdn-JS
         event: TYPO3\CMS\Core\Page\Event\BeforeJavaScriptsRenderingEvent
+        after: myvendor/asset-post-processing/InjectAssets
       - name: event.listener
         event: TYPO3\CMS\Core\Page\Event\BeforeStylesheetsRenderingEvent
   MyVendor\AssetPostProcessing\EventListener\AssetRenderer\LibraryVersion:
     tags:
       - name: event.listener
         event: TYPO3\CMS\Core\Page\Event\BeforeJavaScriptsRenderingEvent
+        after: myvendor/asset-post-processing/InjectAssets
         before: myvendor/asset-post-processing/Cdn-JS
   MyVendor\AssetPostProcessing\EventListener\AssetRenderer\CssMinify:
     tags:
       - name: event.listener
         event: TYPO3\CMS\Core\Page\Event\BeforeStylesheetsRenderingEvent
+        after: myvendor/asset-post-processing/InjectAssets

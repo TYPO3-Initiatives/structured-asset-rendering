@@ -1,23 +1,26 @@
-(function () {
-  function icon(ok) {
-    return ok ? '\u2705' /* WHITE HEAVY CHECK MARK */ : '\u274C' /* CROSS MARK */
-  }
+(() => {
+    const icon = (ok) => {
+        return ok ? '\u2705' /* WHITE HEAVY CHECK MARK */ : '\u274C' /* CROSS MARK */
+    }
 
-  const overlayEl = document.createElement('div'),
-    header = document.createElement('h2'),
-    status = document.createElement('section')
+    const overlayEl = document.createElement('div'),
+        header = document.createElement('h2'),
+        intro = document.createElement('p'),
+        status = document.createElement('section')
 
-  overlayEl.id = 'asset-status'
+    overlayEl.id = 'asset-status'
 
-  header.textContent = 'Listeners changed URI:'
-  overlayEl.append(header)
+    header.textContent = 'AssetPostProcessing'
+    overlayEl.append(header)
 
-  status.textContent = [
-    icon(library.location === 'CDN') + ' Cdn',
-    icon(library.version === '1.1') + ' LibraryVersion'
-  ].join('\n')
+    intro.textContent = 'These AssetRenderer events have altered included assets:'
+    overlayEl.append(intro)
 
-  overlayEl.append(status)
+    status.innerHTML = 
+        icon(library.location === 'CDN') + ' Cdn<br>'
+         + icon(library.version === '1.1') + ' LibraryVersion'
+    
+    overlayEl.append(status)
 
-  document.body.prepend(overlayEl)
+    document.body.prepend(overlayEl)
 })()
