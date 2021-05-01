@@ -22,7 +22,7 @@ class LibraryVersion
 
         foreach ($this->libraries as $library => $source) {
             // if it was already registered
-            if ($asset = $event->getAssetCollector()->getJavaScripts($event->isPriority())[$library] ?? false) {
+            if ($event->getAssetCollector()->getJavaScripts($event->isPriority())[$library] ?? false) {
                 // we set our authoritative version
                 $event->getAssetCollector()->addJavaScript($library, $source);
             }
