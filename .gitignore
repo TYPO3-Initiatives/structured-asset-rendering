@@ -1,1 +1,2 @@
-/vendor/
+.typo3/
+.idea/

@@ -3,7 +3,9 @@
 
 This is meant as a kickstarter to test [https://review.typo3.org/c/Packages/TYPO3.CMS/+/64021][review] during review and to serve as an example for handling AssetCollector/AssetRenderer events later.
 
-You can download it or install via composer:
+If you want to have a quick look around, you can start it with [DDEV-Local](https://ddev.readthedocs.io/):
+
+    ddev launch
 
 You can also download it or install via composer into your test installation:
 
@@ -18,8 +20,5 @@ After installing it registers some assets (in `ext_localconf.php`). You can also
 It registers some EventListeners in `Services.yaml`. They get called before assets are being rendered.
 
 It reports in the frontend which listeners were executed. Play around with the code and see how it affects assets the listeners and the JS/CSS output.
-
-### Note
-In non-composer install, flushing caches via "Maintenance" » "Flush TYPO3 and PHP Cache" is required when changing `Services.yaml`.
 
 [review]: https://review.typo3.org/c/Packages/TYPO3.CMS/+/64021
