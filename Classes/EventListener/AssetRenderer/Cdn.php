@@ -16,7 +16,7 @@ class Cdn
     protected $assetCollector;
 
     /**
-     * @var BeforeStylesheetsRenderingEvent
+     * @var AbstractBeforeAssetRenderingEvent
      */
     protected $event;
 
